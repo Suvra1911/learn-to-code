@@ -11,11 +11,7 @@ package javaapplication2;
  */
 public class BettingMoney {
     
-    public void print(String s){
-        System.out.println(s);
-    }
-   
-    public int moneyMade(int[] amounts, int[] centsPerDollar, int finalResult){
+   public int moneyMade(int[] amounts, int[] centsPerDollar, int finalResult){
         int totalBetAmount = 0;
         for(int i = 0; i < amounts.length; i++){
             if(i!=finalResult){
@@ -24,16 +20,4 @@ public class BettingMoney {
         }
         return totalBetAmount*100 - amounts[finalResult]*centsPerDollar[finalResult];
     }
-    
-    public static void main(String[] args){
-        BettingMoney bm = new BettingMoney();
-        int[] amounts = new int[] {0};
-        int[] centsPerDollar = new int[] {0};
-        int finalResult = 0;
-        bm.print("The net gain is::"+bm.moneyMade(amounts, centsPerDollar, finalResult)+" cents");
-        
-    }
-    
-    
-    
 }
