@@ -22,19 +22,13 @@ public class MainClass {
         PrintStream.print("The net gain is::"+bm.moneyMade(amounts, centsPerDollar, finalResult)+" cents");*/
 
         MatchMaking mm = new MatchMaking();
-        String[] namesWomen = {"Constance", "Bertha", "Alice"};
-        String[] answersWomen = {"aaba","baab","aaaa"};
-        String[] namesMen = {"Chip","Biff","Abe"};
-        String[] answersMen = {"bbaa","baaa","aaab"};
-        String queryWoman = "Bertha";
+        String[] namesWomen = {"Constance", "Alice", "Bertha", "Delilah", "Emily"};
+        String[] answersWomen = {"baabaa","ababab","aaabbb", "bababa", "baabba"};
+        String[] namesMen = {"Ed","Duff","Chip","Abe", "Biff"};
+        String[] answersMen = {"aabaab","babbab","bbbaaa", "abbbba", "abaaba    "};
+        String queryWoman = "Emily";
         
-        Map<String, String> nameAns = new HashMap<String, String>();
-        
-        nameAns = mm.makeMatch(namesWomen, answersWomen, namesMen, answersMen, queryWoman);
-        
-        PrintStream.print("Women-1 (aaba)::"+nameAns.get("Constance"));
-        PrintStream.print("Women-2 (baab)::"+nameAns.get("Bertha"));
-        PrintStream.print("Women-3 (aaaa)::"+nameAns.get("Alice"));
+       PrintStream.print("The matching man for "+queryWoman+" is "+mm.makeMatch(namesWomen, answersWomen, namesMen, answersMen, queryWoman));
         
         
 
