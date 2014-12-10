@@ -21,12 +21,12 @@ public class MainClass {
         int finalResult = 0;
         PrintStream.print("The net gain is::"+bm.moneyMade(amounts, centsPerDollar, finalResult)+" cents");*/
 
-        MatchMaking mm = new MatchMaking();
+        MatchMaking2 mm = new MatchMaking2();
         String[] namesWomen = {"Constance", "Alice", "Bertha", "Delilah", "Emily"};
         String[] answersWomen = {"baabaa","ababab","aaabbb", "bababa", "baabba"};
         String[] namesMen = {"Ed","Duff","Chip","Abe", "Biff"};
         String[] answersMen = {"aabaab","babbab","bbbaaa", "abbbba", "abaaba    "};
-        String queryWoman = "Emily";
+        String queryWoman = "Em";
         
        PrintStream.print("The matching man for "+queryWoman+" is "+mm.makeMatch(namesWomen, answersWomen, namesMen, answersMen, queryWoman));
         
